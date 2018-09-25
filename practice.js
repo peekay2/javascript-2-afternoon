@@ -15,6 +15,10 @@
 */
 
 //Code here
+let me = {
+  name: 'Pat',
+  age: 29
+};
 
 
 
@@ -26,7 +30,14 @@
 */
 
 //Code here
-
+let favoriteThings = {
+  band: 'Odeza',
+  food: 'sushi',
+  person: 'Will Farrell',
+  book: 'The Hot Zone',
+  movie: 'Life',
+  holiday: 'Christmas'
+}
 
 
 /*
@@ -34,7 +45,8 @@
 */
 
 //Code here
-
+favoriteThings.car = 'Coupe';
+favoriteThings.brand = 'Porsche';
 
 
 /*
@@ -42,6 +54,9 @@
 */
 
 //Code here
+
+favoriteThings.food='Chicken Nuggets';
+favoriteThings['book']='Harry Potter';
 
 
 
@@ -56,6 +71,10 @@
 */
 
 //Code here
+let backPack = {};
+var item = 'firstPocket';
+
+backPack[item]='chapstick'
 
 
 
@@ -64,7 +83,7 @@
 */
 
 //Code here
-
+// alert(backPack);
 
 
 /*
@@ -74,7 +93,7 @@ Instead, console.log your whole backPack object and then check out the console.
 */
 
 //Code here
-
+// console.log({backPack});
 
 
 ////////// PROBLEM 4 //////////
@@ -97,7 +116,8 @@ var user2 = {
 */
 
 //Code Here
-
+user2.name='Tyler S. McGinnis';
+user2.email='tyler.mcginnis@devmounta.in';
 
 
 
@@ -120,16 +140,23 @@ var user2 = {
 */
 
 //Code Here
-
-
+let methodCollection = {};
 
 /*
   Now add two methods (functions that are properties on objects) to your methodCollection object. 
   One called 'alertHello' which alerts 'hello' and another method called 'logHello' which logs 'hello' to the console. 
+
+  below we added two methods into the object using both dot and bracket notation. 'logHello' needs '' because it is NOT a variable, therefore we pass variables w/o '' inside the []
 */
 
 //Code Here
+methodCollection.alertHello = function(){
+  alert('hello')
+}
 
+methodCollection['logHello'] = function(){
+  console.log('hello')
+}
 
 
 /*
@@ -137,6 +164,9 @@ var user2 = {
 */
 
 //Code Here
+alertHello();
+logHello();
+
 
 
 
@@ -149,6 +179,14 @@ var user2 = {
 
 //Code Here
 
+function makePerson(name, birthday, ssn ){
+  return {
+    name, 
+    birthday, 
+    ssn
+  };
+}
+
 
 
 ////////// PROBLEM 7 //////////
@@ -160,4 +198,10 @@ var user2 = {
 
 //Code Here
 
-
+function makeCard(cardNumber, expirationDate, securityCode ){
+  return {
+    cardNumber, 
+    expirationDate, 
+    securityCode
+  };
+}
